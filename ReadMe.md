@@ -2,12 +2,13 @@
 
 I can't believe that I am presenting this project as the odds of resurrecting a large multi-year (non-commercial, personal) coding project from over 45 years ago, and make it all work again, was simply zero. Even while pursuing this goal I didn't feel it was technically possible to get everything working again due to all of the lost, critical knowledge of how the "Jinga" runtime system of BASEX functioned. But it seems that nothing is impossible if you focus on a core goal.
 
-This repository acts to document and rebuild the mental history, the development history and the final outcome of my two years of writing Space Invaders for the Exidy Sorcerer during 1980 and 1981, primarily in the little known [BASEX programming language](https://github.com/rcl9/History-Of-The-BASEX-Compiler-from-the-1979-Era for Z80. 
+This repository acts to document and rebuild the mental history, the development history and the final outcome of my two years of writing Space Invaders for the Exidy Sorcerer during 1980 and 1981, primarily in the little known [BASEX programming language](https://github.com/rcl9/History-Of-The-BASEX-Compiler-from-the-1979-Era for Z80). 
 
+<br>
 <div style="text-align:center">
-<p> <img src="/Images/snap1.webp" alt="" style="width:70%; height:auto;">
-<p> <img src="/Images/snap2.webp" alt="" style="width:70%; height:auto;">
+<img src="/Images/snap1.webp" alt="" style="width:45%; height:auto;">   <img src="/Images/snap2.webp" alt="" style="width:45%; height:auto;">
 </div>
+<br>
 
 ## Some Initial Perspective
 
@@ -22,14 +23,14 @@ In some half-joking manner, this project was why I would never come to (*ever*) 
 Space Invaders was released in April 1978 by Taito and Midway Manufacturing in late 1978. I became intrigued with it in early 1980 and decided to implement my own version. Having been born with a camera in hand, I snuck into an arcade at a local mall to take screen snapshots of the game. This was well before there were magazines or the Internet to download such assets.
 
 <div style="text-align:center">
-<img src="/Images/1980 Arcade2.webp" alt="" style="width:35%; height:auto;">    <img src="/Images/1980 Arcade.webp" alt="" style="width:35%; height:auto;">
+<img src="/Images/1980 Arcade2.webp" alt="" style="width:45%; height:auto;">   <img src="/Images/1980 Arcade.webp" alt="" style="width:45%; height:auto;">
 </div>
 
 I then set out to clone the game as a complete newbie to the trade. In some regards (in my current mindset) this was a complete waste of my life but the upside is that it explicitly forced me into a completely different profession and not the much more lucrative game development market.  From those photos I developed a few dozen digital representations of each sprite using graph paper:
 
 <div style="text-align:center">
-<p> <img src="/Images/graphics1.webp" alt="" style="width:50%; height:auto;">
-<p><img src="/Images/graphics2.webp" alt="" style="width:50%; height:auto;">
+<p> <img src="/Images/graphics1.webp" alt="" style="width:40%; height:auto;">
+<p><img src="/Images/graphics2.webp" alt="" style="width:75%; height:auto;">
 </div>
 
 From that I implemented the Space Invaders program in 800 lines of BASIC using the Exidy Sorcerer's 8k Pac-BASIC in April 1980. It was cassette based which took a few minutes to save (one or two copies) of the code to tape at 1200 baud. Additionally, as noted elsewhere, my Sorcerer was apt to crash or lock up due to its excessive heat issues on the 5v power rail. Nevertheless, I didn't know any better at the time and hence found this to be a good challenge and goal to clone Space Invaders. 
