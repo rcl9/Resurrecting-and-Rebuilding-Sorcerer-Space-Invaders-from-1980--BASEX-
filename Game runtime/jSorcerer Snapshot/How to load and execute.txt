@@ -1,0 +1,14 @@
+- Start the jSorcerer emulator via the JAVA "sorcerer.jar" file.
+
+- Press the "Load snapshot" icon in jSorcerer emulator's user interface and load up the "_jSorcerer Memory Snapshot.snp" file. 
+
+- Type "GO 100" (in uppercase) while in the Exidy program monitor.
+	
+- Enter 0 when it asks for "Range?"
+
+[[ The following line should only be entered if you want to modify the code or do a file listing. ]]
+[[- Enter "8496 24756  28499 32511" into BASEX when it asks for "Range?"]]
+	
+- Type "LST" to optionally list the program file or "LSM" to list the symbol table. 
+
+- Type "RUN 8496" (in uppercase) to execute the program -- it'll abort pre-maturally if you don't enter the starting line number. 

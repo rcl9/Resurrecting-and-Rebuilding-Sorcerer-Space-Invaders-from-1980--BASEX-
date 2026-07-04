@@ -1,0 +1,59 @@
+Exidy PacBasic with CP/M Disk Support - By RCL9 - April 23, 1983
+-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+
+Sorcerer standard basic has been relocated from C000H to 8000H with disk I/O routines residing from 7A59H to 7FFFH. It requires a 48k machine with CP/M located above 9D00H. If your CP/M is any lower, you’re out of luck. But this has only happened to one unlucky individual.
+
+The reasons behind this move down is because my Morrow DISCUS DJ2D disk controller ROM is located in the middle of the ROMPAC memory area. Also, the Basic does not have any disk commands. Adding them to the ROMPAC could not be done easily so the next best thing was to move it and do the modifications.
+
+All PacBasic programs that have any machine language routines that call PacBasic Rom routines must be modified so that the addresses be relocated from C000H-DFFFH to 8000H-9FFFH. All others will work exactly the same as in Rom-Pac Basic. 
+
+Another potential problem are programs that were saved on tape starting < 01D5H. An example would be that of a small machine language program residing at 0000H and saved as part of the basic program using the monitor SA command. This small program will have to converted to data statements and poked into zero page when the program is loaded. Only basic programs starting at 01D5H can be saved on the disk. This is because CP/M‘s zero page must be intact when the disk I/O commands are used in the basic. 
+
+Disk I/O Commands:
+-=-=-=-=-=-=-=-=-
+
+DIR"A:FILENAME.TYP"
+	This prints the directory of drive X
+ 	- ‘A:’ is optional
+ 	- ‘FILENAME.TYP’ is optional
+	- If you change a disk in a drive between DSAVE’s then do a ‘DIR’ to initialize that drive.
+	 - ‘DIR "B:"’ will print the directory of B drive
+
+DSAVE"A:FILENAME"
+	This saves a basic program with filetype ‘BAS’ on disk X
+ 	- ‘A:’ is optional
+
+DLOAD"A:FILENAME"
+	This loads a Pac-basic program of type ‘BAS’ from disk into memory.
+	 - ‘A:’ is optional
+
+Disk I/O Errors:
+-=-=-=-=-=-=
+
+FF Error
+	File not found error
+ 	- Do a ‘DIR’ to initialize the disk or check to see if the program is really on that disk.
+
+DF Error
+	Disk full error
+
+NB Error
+	Not Pac-basic filetype ‘BAS’ program
+
+CP/M Compatibility
+-=-=-=-=-=-=-=-=-
+
+CP/M Zero Page 0000-00FF 
+Basic work area 0100-01D5 
+Basic text area 01D5-7A58 
+PacBasic 7A59H-9B80H
+CP/M 9D00H-BEFFH (48k)
+Monitor BF00H-BFFFH (48k)
+
+To return to CP/M without destroying PacBasic and whatever program you have in memory, type ‘BYE’ then while in the monitor type ‘GO 0’ and the CP/M prompt should appear. If not, do a disk boot (PacBasic will still be untouched after a cold disk boot).
+
+In CP/M you may DIR, SAVE and ERA a program. This won't destroy PacBasic. You cannot 'STAT' a program while in CP/M because it will destroy the basic program presently in memory.
+
+To return to Basic from CP/M go to the monitor then type ‘GO 100’ and the basic will be warm started. To cold start the Basic, 'GO 8000'.
+
+If any of the disk commands do not work, go to the monitor and cold start CP/M with a 'GO D000' (DISCUS DJ2D boot), return to the monitor and ‘GO 100’. Now the commands will work. 
