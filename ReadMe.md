@@ -20,7 +20,7 @@ In some half-joking manner, this project was why I would never come to (*ever*) 
 
 ## The Start of the Game's Development in 1980
 
-Space Invaders was released in April 1978 by Taito and Midway Manufacturing in late 1978. I became intrigued with it in early 1980 and decided to implement my own version. Having been born with a camera in hand, I snuck into an arcade at a local mall to take screen snapshots of the game. This was well before there were magazines or the Internet to download such assets.
+Space Invaders was released in April 1978 by Taito and Midway Manufacturing in late 1978. I became intrigued with it in early 1980 and decided to implement my own version. Having been born with a camera in hand, I snuck into an arcade at a local mall to take these screen snapshots of the game. This was well before there were magazines or the Internet to download such digital assets.
 
 <div style="text-align:center">
 <img src="/Images/1980 Arcade2.webp" alt="" style="width:40%; height:auto;">      <img src="/Images/1980 Arcade.webp" alt="" style="width:45%; height:auto;">
@@ -33,11 +33,11 @@ I then set out to clone the game as a complete newbie to the trade. In some rega
 <p><img src="/Images/graphics2.webp" alt="" style="width:75%; height:auto;">
 </div>
 
-From that I implemented the Space Invaders program in 800 lines of BASIC using the Exidy Sorcerer's 8k Pac-BASIC in April 1980. It was cassette based which took a few minutes to save (one or two copies) of the code to tape at 1200 baud. Additionally, as noted elsewhere, my Sorcerer was apt to crash or lock up due to its excessive heat issues on the 5v power rail. Nevertheless, I didn't know any better at the time and hence found this to be a good challenge and goal to clone Space Invaders. 
+From that I implemented the Space Invaders program in [800 lines of BASIC](</Older Exidy 8k BASIC version/Space Invaders.bas>) using the Exidy Sorcerer's 8k [Pac-BASIC](</Older Exidy 8k BASIC version/PacBasic.doc>)  in April 1980. It was cassette based which took a few minutes to save (one or two copies) of the code to tape at 1200 baud. Additionally, as noted elsewhere, my Sorcerer was apt to crash or lock up due to its excessive heat issues on the 5v power rail. Nevertheless, I didn't know any better at the time and hence found this to be a good challenge and goal to clone Space Invaders. 
 
 Seeing that it was too slow I then made the decision to port it over to the BASEX language (in July 1980) which proported to run 5 to 20 times faster than BASIC. I had come across BASEX in my print copy of the <a href="https://archive.org/details/dr_dobbs_journal_vol_03">Dr. Dobb's Journal, volume 3, page 451</a>. I have recently and [extensively documented](https://github.com/rcl9/History-Of-The-BASEX-Compiler-from-the-1979-Era) all of that related work to resurrect BASEX and its history, as it related to this Exidy Sorcerer Space Invaders game development. In some regard it did run faster than BASIC but coding in the BASEX runtime environment was terribly "hair pulling and head banging" to say the least -- please read my comments in my other repo to learn why.
 
-The last version of the BASEX implementation of Sorcerer Space Invaders came in at 2030 lines of code and 500 lines of symbol table, as well as a hand coded Z80 machine language library of support routines to speed up the graphics operations + user I/O.  All of this was developed on paper and not interactively within the BASEX command-line driven program (as the concept of "editing and debugging" just wasn't supported well in BASEX). As changes were made on paper then they were transcribed to the BASEX compiler's code listing and saved to cassette tape -- this also ensured that my coding would be spared in case there were errors on the tape (which happened often). It also ensured that I could OCR those hand written code listings 45 years later and rebuild the same BASEX code base for the game. 
+The last version of the BASEX implementation of Sorcerer Space Invaders came in at [2030 lines of code](</Listing/BASEX - Sorcerer Space Invaders.txt>) and 500 lines of symbol table, as well as a hand coded Z80 machine language library of support routines to speed up the graphics operations + user I/O.  All of this was developed on paper and not interactively within the BASEX command-line driven program (as the concept of "editing and debugging" just wasn't supported well in BASEX). As changes were made on paper then they were transcribed to the BASEX compiler's code listing and saved to cassette tape -- this also ensured that my coding would be spared in case there were errors on the tape (which happened often). It also ensured that I could OCR those hand written code listings 45 years later and rebuild the same BASEX code base for the game. 
 
 ## The "Psychology of Game Development in 1980" 
 
@@ -47,7 +47,7 @@ In 1980 I only had a 16k Exidy Sorcerer computer with a tape cassette for saving
 
 Since I had no IDE nor editor for BASEX, I chose to do the "programming" all on paper. The final BASEX file listing is from 61 pages (!!) of carefully hand written code.  That is just insane to think about for any current and modern programmer. It's even insane for me to think about today. Again, I simply did not know any better at the time. 
 
-Working with the BASEX compiler/runtime environment was like walking across cracked ice and knowing it was going to fail at any moment. It was painful and mind numbing experience all around. The compiler controlled you as you had little control over it. All you could do was enter a line number and a command statement. If you typed "run" then you'd most likely end up in the Exidy monitor program as there was little debugging feedback or reporting in the runtime system when something failed. I suppose this is why I became quite good at debugging code logically in my head and without needing tool support. 
+Working with the BASEX compiler/runtime environment was like walking across cracked ice and knowing it was going to fail at any moment. It was painful and mind numbing experience all around. *The compiler controlled you* as you had little control over it. All you could do was enter a line number and a command statement. If you typed "run" then you'd most likely end up in the Exidy monitor program as there was little debugging feedback or reporting in the runtime system when something failed. I suppose this is why I became quite good at debugging code logically in my head and without needing tool support. 
 
 Similarly, all of my Z80 coding of that pre-1982 era was done mainly in pure machine language on paper as I did not have access to a 8080/Z80 assembler yet (at least not until I got my CP/M system up and running). I still have lots of scanned documents of that era where I had written several full length programs for the Exidy Sorcerer in page 0 (addresses 0 to 255). 
 
@@ -83,7 +83,7 @@ The program is loaded into memory as (1) the BASEX component, (2) the Space Inva
 
 In this repository I have provided two runtime executables of the Space Invaders game that can be executed on a real Exidy Sorcerer machine or  the MAME emulator running CP/M (Dreamdisk System), or the jSorcerer emulator:
 
-- A CP/M compatible [binary file](</Game runtime/CPM Binary/BasexInv.com>) has been created which loads up at 0x100H but related to zero memory. 
+- A CP/M compatible [binary file](</Game runtime/CPM Binary/BasexInv.com>) has been created which loads up at 0x100H (== CP/M "TPA"), relocated to zero memory, and then executed from 0x100H.
 
 - A jSorcerer emulator "[snapshot image](</Game runtime/jSorcerer Snapshot/_jSorcerer Memory Snapshot.snp>)". An explanation of how to load up jSorcerer and execute this memory snapshot is provided in [this document](</Game runtime/jSorcerer Snapshot/How to load and execute.txt>).
 
