@@ -2,7 +2,7 @@
 
 I can't believe that I am presenting this project as the odds of resurrecting a large multi-year (non-commercial, personal) coding project from over 45 years ago, and make it all work again, was simply zero. Even while pursuing this goal I didn't feel it was technically possible to get everything working again due to all of the lost, critical knowledge of how the "Jinga" runtime system of BASEX functioned. But it seems that nothing is impossible if you focus on a core goal.
 
-This repository acts to document and rebuild the mental history, the development history and the final outcome of my two years of writing Space Invaders for the Exidy Sorcerer during 1980 and 1981, primarily in the little known [BASEX programming language](https://github.com/rcl9/History-Of-The-BASEX-Compiler-from-the-1979-Era for Z80). 
+This repository acts to document and rebuild the mental history, the development history and the final outcome of my two years of writing Space Invaders for the Exidy Sorcerer during 1980 and 1981, primarily in the little known [BASEX programming language](https://github.com/rcl9/History-Of-The-BASEX-Compiler-from-the-1979-Era).
 
 <br>
 <div style="text-align:center">
@@ -23,7 +23,7 @@ In some half-joking manner, this project was why I would never come to (*ever*) 
 Space Invaders was released in April 1978 by Taito and Midway Manufacturing in late 1978. I became intrigued with it in early 1980 and decided to implement my own version. Having been born with a camera in hand, I snuck into an arcade at a local mall to take screen snapshots of the game. This was well before there were magazines or the Internet to download such assets.
 
 <div style="text-align:center">
-<img src="/Images/1980 Arcade2.webp" alt="" style="width:45%; height:auto;">   <img src="/Images/1980 Arcade.webp" alt="" style="width:45%; height:auto;">
+<img src="/Images/1980 Arcade2.webp" alt="" style="width:40%; height:auto;">      <img src="/Images/1980 Arcade.webp" alt="" style="width:45%; height:auto;">
 </div>
 
 I then set out to clone the game as a complete newbie to the trade. In some regards (in my current mindset) this was a complete waste of my life but the upside is that it explicitly forced me into a completely different profession and not the much more lucrative game development market.  From those photos I developed a few dozen digital representations of each sprite using graph paper:
@@ -65,7 +65,7 @@ To make a long story short, it took a few weeks to [retrieve my original develop
 
 After all was said and done, my detective work on the many dozens of files I had retrieved from tape pointed to "PROG2" on side two of a tape to be the final version, and CRC-verified error free, both with the program listing and its all-important matching symbol table file. Phew! Additionally, I was able to eventually narrow down and verify an error free version of the BASEX compiler and its runtime library which I had previously extensively modified for my Space Invaders game in 1980. The pieces were starting to fall into place. 
 
-I then came to learn that I had written a "ROUTN" library in Z80 machine language. The BASEX code would call into this library using its "CAL" statement, allowing me to speed up graphics related operations and any machine I/O. I then wrote a [new and simple utility](/MAKE REF TO THE ACTUAL REPO) to dump the contents of the BASEX symbol table files with which I could then equate the addresses in my ROUTN library to my paper notes of 1980/1981 and of the calls made from the BASEX listing - that helped tremendously to create a mental map in my head of how everything pieced together:
+I then came to learn that I had written a "ROUTN" library in Z80 machine language. The BASEX code would call into this library using its "CAL" statement, allowing me to speed up graphics related operations and any machine I/O. I then wrote a new and simple utility to dump the contents of the BASEX symbol table files with which I could then equate the addresses in my ROUTN library to my paper notes of 1980/1981 and of the calls made from the BASEX listing - that helped tremendously to create a mental map in my head of how everything pieced together:
 
 | Code Segment  | Memory Range  |
 |:------------- |:---------------- | 
@@ -85,7 +85,7 @@ In this repository I have provided two runtime executables of the Space Invaders
 
 - A CP/M compatible [binary file](</Game runtime/CPM Binary/BasexInv.com>) has been created which loads up at 0x100H but related to zero memory. 
 
-- A jSorcerer emulator "[snapshot image](</Game runtime/jSorcerer Snapshot/_jSorcerer Memory Snapshot.snp>)". An explanation of how to load up jSorcerer and execute this memory snapshot is provided in [this document](/Game runtime/jSorcerer Snapshot/How to load and execute.txt).
+- A jSorcerer emulator "[snapshot image](</Game runtime/jSorcerer Snapshot/_jSorcerer Memory Snapshot.snp>)". An explanation of how to load up jSorcerer and execute this memory snapshot is provided in [this document](</Game runtime/jSorcerer Snapshot/How to load and execute.txt>).
 
 When BASEX starts up enter "0" to the "Range?" question. The code can then be run via a "RUN 8496" (if you don't enter the starting line number then BASEX will simply exit and return to the Exidy monitor!!).
 
