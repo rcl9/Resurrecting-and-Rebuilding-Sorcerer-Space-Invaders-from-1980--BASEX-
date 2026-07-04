@@ -2,12 +2,11 @@
 
 I can't believe that I am presenting this project as the odds of resurrecting a large multi-year (non-commercial, personal) coding project from over 45 years ago, and make it all work again, was simply zero. Even while pursuing this goal I didn't feel it was technically possible to get everything working again due to all of the lost, critical knowledge of how the "Jinga" runtime system of BASEX functioned. But it seems that nothing is impossible if you focus on a core goal.
 
-This repository acts to document and rebuild the mental history, the development history and the final outcome of my two years of writing Space Invaders for the Exidy Sorcerer during 1980 and 1981, primarily in the little known BASEX programming language for Z80. 
+This repository acts to document and rebuild the mental history, the development history and the final outcome of my two years of writing Space Invaders for the Exidy Sorcerer during 1980 and 1981, primarily in the little known [BASEX programming language](https://github.com/rcl9/History-Of-The-BASEX-Compiler-from-the-1979-Era for Z80. 
 
 <div style="text-align:center">
-<img src="/Images/snap1.webp" alt="" style="width:70%; height:auto;">  <img src="/Images/1980 Arcade.webp" alt="" style="width:70%; height:auto;">
-<br><img src="/Images/snap2.webp" alt="" style="width:70%; height:auto;">  <img src="/Images/1980 Arcade.webp" alt="" style="width:70%; height:auto;">
-<br><img src="/Images/snap3.webp" alt="" style="width:70%; height:auto;">  <img src="/Images/1980 Arcade.webp" alt="" style="width:70%; height:auto;">
+<p> <img src="/Images/snap1.webp" alt="" style="width:70%; height:auto;">
+<p> <img src="/Images/snap2.webp" alt="" style="width:70%; height:auto;">
 </div>
 
 ## Some Initial Perspective
@@ -23,18 +22,19 @@ In some half-joking manner, this project was why I would never come to (*ever*) 
 Space Invaders was released in April 1978 by Taito and Midway Manufacturing in late 1978. I became intrigued with it in early 1980 and decided to implement my own version. Having been born with a camera in hand, I snuck into an arcade at a local mall to take screen snapshots of the game. This was well before there were magazines or the Internet to download such assets.
 
 <div style="text-align:center">
-<img src="/Images/1980 Arcade2.webp" alt="" style="width:70%; height:auto;">  <img src="/Images/1980 Arcade.webp" alt="" style="width:70%; height:auto;">
+<img src="/Images/1980 Arcade2.webp" alt="" style="width:35%; height:auto;">    <img src="/Images/1980 Arcade.webp" alt="" style="width:35%; height:auto;">
 </div>
 
 I then set out to clone the game as a complete newbie to the trade. In some regards (in my current mindset) this was a complete waste of my life but the upside is that it explicitly forced me into a completely different profession and not the much more lucrative game development market.  From those photos I developed a few dozen digital representations of each sprite using graph paper:
 
 <div style="text-align:center">
-<img src="/Images/graphics1.webp" alt="" style="width:70%; height:auto;">  <img src="/Images/graphics2.webp" alt="" style="width:70%; height:auto;">
+<p> <img src="/Images/graphics1.webp" alt="" style="width:50%; height:auto;">
+<p><img src="/Images/graphics2.webp" alt="" style="width:50%; height:auto;">
 </div>
 
 From that I implemented the Space Invaders program in 800 lines of BASIC using the Exidy Sorcerer's 8k Pac-BASIC in April 1980. It was cassette based which took a few minutes to save (one or two copies) of the code to tape at 1200 baud. Additionally, as noted elsewhere, my Sorcerer was apt to crash or lock up due to its excessive heat issues on the 5v power rail. Nevertheless, I didn't know any better at the time and hence found this to be a good challenge and goal to clone Space Invaders. 
 
-Seeing that it was too slow I then made the decision to port it over to the BASEX language (in July 1980) which proported to run 5 to 20 times faster than BASIC. I had come across BASEX in my print copy of the <a href="https://archive.org/details/dr_dobbs_journal_vol_03">Dr. Dobb's Journal, volume 3, page 451</a>. I have recently and extensively documented all of that related work]( ADD IN REFERENCE CODE) to resurrect BASEX and its history, as it related to this Exidy Sorcerer Space Invaders game development. In some regard it did run faster than BASIC but coding in the BASEX runtime environment was terribly "hair pulling and head banging" to say the least -- please read my comments in my other repo to learn why.
+Seeing that it was too slow I then made the decision to port it over to the BASEX language (in July 1980) which proported to run 5 to 20 times faster than BASIC. I had come across BASEX in my print copy of the <a href="https://archive.org/details/dr_dobbs_journal_vol_03">Dr. Dobb's Journal, volume 3, page 451</a>. I have recently and [extensively documented](https://github.com/rcl9/History-Of-The-BASEX-Compiler-from-the-1979-Era) all of that related work to resurrect BASEX and its history, as it related to this Exidy Sorcerer Space Invaders game development. In some regard it did run faster than BASIC but coding in the BASEX runtime environment was terribly "hair pulling and head banging" to say the least -- please read my comments in my other repo to learn why.
 
 The last version of the BASEX implementation of Sorcerer Space Invaders came in at 2030 lines of code and 500 lines of symbol table, as well as a hand coded Z80 machine language library of support routines to speed up the graphics operations + user I/O.  All of this was developed on paper and not interactively within the BASEX command-line driven program (as the concept of "editing and debugging" just wasn't supported well in BASEX). As changes were made on paper then they were transcribed to the BASEX compiler's code listing and saved to cassette tape -- this also ensured that my coding would be spared in case there were errors on the tape (which happened often). It also ensured that I could OCR those hand written code listings 45 years later and rebuild the same BASEX code base for the game. 
 
@@ -60,7 +60,7 @@ I would not want to go back to those days of coding but it was still a very good
 
 ## Rebuilding Sorcerer Space Invaders with the BASEX Compiler and Runtime Library
 
-To make a long story short, it took a few weeks to [retrieve my original development files](/How_To_Archive_Old_Computer_Data_Tapes_Using_Tapetool2_(Exidy_Sorcerer)) from cassette tape and make any sense of what I had in hand. For me, it was just a bunch of gobbly-gook with no rhyme nor reason. I had also recently thrown out 4ft of printed manuals of the 1980s and one of them was the critically important BASEX manual with all of my runtime notes along with it. However, I did discover a folio of my daily notes which I had made in 1980 and 1981 -- that started to revive my memories of this project and provide some important runtime execution clues. My [deep dive into BASEX](/Rebuilding_the_History_and_Runtime_Environment_of_the_BASEX_Compiler_from_the_1979_Era) and how it worked allowed me to get it up and running again on the jSorcerer emulator, even as primitive as it may be. 
+To make a long story short, it took a few weeks to [retrieve my original development files](https://github.com/rcl9/How_To_Archive_Old_Computer_Data_Tapes_Using_Tapetool2) from cassette tape and make any sense of what I had in hand. For me, it was just a bunch of gobbly-gook with no rhyme nor reason. I had also recently thrown out 4ft of printed manuals of the 1980s and one of them was the critically important BASEX manual with all of my runtime notes along with it. However, I did discover a folio of my daily notes which I had made in 1980 and 1981 -- that started to revive my memories of this project and provide some important runtime execution clues. My [deep dive into BASEX](https://github.com/rcl9/History-Of-The-BASEX-Compiler-from-the-1979-Era) and how it worked allowed me to get it up and running again on the jSorcerer emulator, even as primitive as it may be. 
 
 After all was said and done, my detective work on the many dozens of files I had retrieved from tape pointed to "PROG2" on side two of a tape to be the final version, and CRC-verified error free, both with the program listing and its all-important matching symbol table file. Phew! Additionally, I was able to eventually narrow down and verify an error free version of the BASEX compiler and its runtime library which I had previously extensively modified for my Space Invaders game in 1980. The pieces were starting to fall into place. 
 
@@ -82,16 +82,16 @@ The program is loaded into memory as (1) the BASEX component, (2) the Space Inva
 
 In this repository I have provided two runtime executables of the Space Invaders game that can be executed on a real Exidy Sorcerer machine or  the MAME emulator running CP/M (Dreamdisk System), or the jSorcerer emulator:
 
-- A CP/M compatible [binary file](/Game runtime/CPM Binary/BasexInv.com) has been created which loads up at 0x100H but related to zero memory. 
+- A CP/M compatible [binary file](</Game runtime/CPM Binary/BasexInv.com>) has been created which loads up at 0x100H but related to zero memory. 
 
-- A jSorcerer emulator "[snapshot image](/Game runtime/jSorcerer Snapshot/_jSorcerer Memory Snapshot.snp". An explanation of how to load up jSorcerer and execute this memory snapshot is provided in [this document](/Game runtime/jSorcerer Snapshot/How to load and execute.txt).
+- A jSorcerer emulator "[snapshot image](</Game runtime/jSorcerer Snapshot/_jSorcerer Memory Snapshot.snp>)". An explanation of how to load up jSorcerer and execute this memory snapshot is provided in [this document](/Game runtime/jSorcerer Snapshot/How to load and execute.txt).
 
 When BASEX starts up enter "0" to the "Range?" question. The code can then be run via a "RUN 8496" (if you don't enter the starting line number then BASEX will simply exit and return to the Exidy monitor!!).
 
 ## See Also
 
-Rebuilding_the_History_and_Runtime_Environment_of_the_BASEX_Compiler_from_the_1979_Era
+[History of 8080-Z80 BASEX Compiler from the 1979 Era](https://github.com/rcl9/History-Of-The-BASEX-Compiler-from-the-1979-Era)
 
-How_To_Archive_Old_Computer_Data_Tapes_Using_Tapetool2_(Exidy_Sorcerer)
+[How To Archive Old Computer Data Tapes Using Tapetool2 (for the Exidy Sorcerer)](https://github.com/rcl9/How_To_Archive_Old_Computer_Data_Tapes_Using_Tapetool2)
 
 [TapeTool - A Microbee Tape Diagnotic and Recovery Utility (older open source version)](https://github.com/toptensoftware/tapetool)
