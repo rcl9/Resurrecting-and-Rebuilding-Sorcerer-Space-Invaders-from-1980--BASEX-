@@ -1,4 +1,4 @@
-# Resurrecting and Rebuilding 'Sorcerer Space Invaders' from 1980 (BASEX Language)
+# Resurrecting and Rebuilding 'Sorcerer Space Invaders' from 1980 (BASEX Language) + the "Psychology and Reality of Game Development in 1980"
 
 I can't believe that I am presenting this project as the odds of resurrecting a large multi-year (non-commercial, personal) coding project from over 45 years ago, and make it all work again, was simply zero. Even while pursuing this goal I didn't feel it was technically possible to get everything working again due to all of the lost, critical knowledge of how the "Jinga" runtime system of BASEX functioned. But it seems that nothing is impossible if you focus on a core goal.
 
