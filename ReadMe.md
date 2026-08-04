@@ -65,7 +65,7 @@ Others, who have recently read my comments above, have argued that "this was not
 
 - Now, add in the Exidy S-100 expansion box + Morrow DJ2D S-100 controller card (with CP/M 1.4) + Shugart 801R 8in floppy drive + MX-80 printer ($2500) and one box of 8in diskettes ($41), brought the overall cost up to $4247 or $18,262 in current dollars. Yikes!! People today will just have no clue how expensive computers were prior to ~2003 when prices finally crashed.
 
-- Hence, after purchasing all of my added computer educational books and everyday living costs, there was no wiggle room to then purchase (expensive) software to run on the machine. Such luxuries were for businesses or people with a job. That's what forced people like myself to do all of their coding on paper. For example, the following are the cosfs of basic software packages for CP/M in 1980 (US$4400 in today's dollars):
+- Hence, after purchasing all of my added computer educational books and everyday living costs, there was no wiggle room to then purchase (expensive) software to run on the machine. Such luxuries were for businesses or people with a job. That's what forced people like myself to do all of their coding on paper. For example, the following are the costs of basic software packages for CP/M in 1980 (US$4400 in today's dollars):
 
 	- Microsoft M80/L80 assembler ($200)
 	- ZSID debugger for CP/M ($130)
